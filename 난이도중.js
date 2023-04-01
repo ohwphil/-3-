@@ -14,21 +14,3 @@
         리턴 10000원이 넘어가면 10% 할인 or 그냥 그 가격
 
 */
-function calculatePrice(items, quantities) {
-  let totalPrice = 0;
-  for (let i = 0; i < items.length; i++) {
-    totalPrice += items[i].price * quantities[i];
-  }
-  if (totalPrice >= 80000) {
-    totalPrice *= 0.9;
-  }
-  return totalPrice;
-}
-let clothes = [
-  { name: "드레스", price: 40000 },
-  { name: "바지", price: 5000 },
-];
-let quantities1 = [2, 3];
-
-let finalPrice = calculatePrice(clothes, quantities1);
-console.log(finalPrice);
